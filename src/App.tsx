@@ -8,7 +8,8 @@ function App() {
     "https://images.unsplash.com/photo-1623476408624-721c9185d569?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80";
 
   return (
-      <Post 
+    <div className="bg-slate-900 p-[16px] grid place-items-center gap-[16px] min-h-[100vh]">
+      <Post
         author={{
           name: "Anakin Skywalker",
           photo: ANAKIN_IMAGE,
@@ -18,6 +19,7 @@ function App() {
         image={RAY_IMAGE}
         date={"26 July"}
       />
+    </div>
   );
 }
 
