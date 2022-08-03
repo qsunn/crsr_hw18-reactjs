@@ -11,11 +11,11 @@ interface PostProps {
 
 export function Post(props: PostProps) {
   return (
-    <div className="container border rounded-[16px] border-slate-700 text-white max-w-screen-sm p-[16px] pl-[80px] pb-[32px] flex flex-col relative">
+    <div className="container border rounded-[16px] border-slate-700 text-white max-w-screen-sm p-[16px] pl-[80px] flex flex-col relative">
       <img
         src={props.author.photo}
         alt="avatar"
-        className="w-[48px] rounded-[50%] absolute top-[16px] left-[16px]"
+        className="w-[48px] h-[48px] rounded-[50%] absolute top-[16px] left-[16px]"
       />
       <div className="flex gap-[8px]">
         <h2 className="font-bold text-md">{props.author.name}</h2>
@@ -25,7 +25,7 @@ export function Post(props: PostProps) {
       </div>
       <div className="flex gap-[8px] flex-col">
         <p>{props.content}</p>
-        <img src={props.image} alt="img" className="rounded-[24px] max-w-fit" />
+        {props.image && <img src={props.image} alt="img" className="rounded-[24px] max-w-fit" />}
       </div>
     </div>
   );
